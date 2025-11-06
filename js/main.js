@@ -15,8 +15,8 @@ $(function () {
   });
 
   // メニューが表示されている時に画面をクリックした場合
-  $("").on("click", function () {
+  $(".mask").on("click", function () {
 
-    $("").removeClass("");
+    $("header").removeClass("open");
   });
 });

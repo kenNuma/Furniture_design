@@ -64,18 +64,24 @@ header a{
 
 /* MaskMenu*/
 .mask-menu {
+    top: 0;
     position: fixed;
     left: -300px;
     opacity: 0;
     transition: all 0.5s;
-    color: white;
+    z-index: 20;
 }
 .open .mask-menu {
     opacity: 1;
     left: 0;
+    padding: 36px 50px;
 }
+.menu-list a {
+    color: #fff;
+}
+
 .menu-list li {
-    
+    margin-bottom: 18px;
 }
 
 .open .toggle span {
@@ -97,7 +103,22 @@ header a{
     position: absolute;
 }
 
-
+.mask {
+    display: none;
+    transition: 0.5s;
+}
+.open .mask {
+    display: block;
+    position: fixed;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    z-index: 10;
+    background: #000;
+}
 
 /* footer */
 footer {
@@ -199,3 +220,44 @@ main {
     margin: 20px;
 }
 
+/* about */
+.child h1{
+    font-size: 0.875rem;
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+
+.about-text {
+    max-width: 600px
+}
+
+.about-text p {
+    line-height: 1.9;
+    margin-bottom: 30px;
+}
+
+/* company */
+.company {
+    max-width: 600px;
+}
+
+.company dl {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.company dt {
+    width: 30%;
+    border-bottom: #dcdbdb solid 1px;
+    padding: 20px 10px;
+}
+.company dd {
+    width: 70%;
+    border-bottom: #dcdbdb solid 1px;
+    padding: 20px 10px;
+}
+
+.map {
+    width: 100%;
+}
