@@ -55,13 +55,33 @@ header a{
     cursor: pointer;
     z-index: 20px;
 }
+
+.toggle span{
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: #333;
+    transition: 0.5s;
+    position: absolute;
+}
+
 .toggle span:nth-child(1) {
     top: 10px
 }
+
 .toggle span:nth-child(2) {
     top: 18px
 }
 
+.open .toggle span {
+    background-color: white;
+}
+.open .toggle span:nth-child(1) {
+    transform: translateY(4px) rotate(-45deg);
+}
+.open .toggle span:nth-child(2) {
+    transform: translateY(-4px) rotate(45deg);
+}
 /* MaskMenu*/
 .mask-menu {
     top: 0;
@@ -84,24 +104,9 @@ header a{
     margin-bottom: 18px;
 }
 
-.open .toggle span {
-    background-color: white;
-}
-.open .toggle span:nth-child(1) {
-    transform: translateY(4px) rotate(-45deg);
-}
-.open .toggle span:nth-child(2) {
-    transform: translateY(-4px) rotate(45deg);
-}
 
-.toggle span{
-    display: block;
-    width: 30px;
-    height: 2px;
-    background-color: #333;
-    transition: 0.5s;
-    position: absolute;
-}
+
+
 
 .mask {
     display: none;
